@@ -65,11 +65,6 @@ namespace ShoeSystem
                 {
 
                     ClassConnection.connectionDatabase();
-                    //listView1.Columns.Add("รหัสสินค้า", 100, HorizontalAlignment.Left);
-                    //listView1.Columns.Add("ชื่อสินค้า", 100, HorizontalAlignment.Left);
-                    //listView1.Columns.Add("จำนวน", 100, HorizontalAlignment.Left);
-                    //listView1.Columns.Add("ราคา", 100, HorizontalAlignment.Left);
-                    //listView1.Columns.Add("ราคารวม", 100, HorizontalAlignment.Left);
                     string Sql = @"INSERT INTO tbbuyitem(buyid,Id_product,buyitempricebuy,buyitemqty,buyitemtotal) VALUES(@a,@b,@c,@d,@e)";
                     ClassConnection.command = new OleDbCommand(Sql, ClassConnection.connection);
                     ClassConnection.command.Parameters.AddWithValue("a", txtID.Text);
